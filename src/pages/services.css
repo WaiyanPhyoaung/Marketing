@@ -1,0 +1,82 @@
+.services {
+  width: 100%;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+.service-top {
+  margin-top: 5rem;
+  text-align: center;
+}
+.service-top p {
+  color: var(--secondary);
+  text-transform: uppercase;
+}
+.service-top h4 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 70px;
+  text-transform: capitalize;
+}
+.service-bot {
+  margin: 2rem 2%;
+  background-image: url("../_data/bg-3.svg");
+  background-size: cover;
+}
+.service-bot-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 300px;
+  min-width: 270px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.card .card-icon {
+  text-align: center;
+}
+.card .card-header {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card .card-info {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.8);
+}
+.card .card-btn {
+  margin: 2rem 0;
+  margin-bottom: 0;
+  text-align: end;
+}
+@media screen and (max-width: 768px) {
+  .services {
+    width: 100%;
+  }
+  .service-top {
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .service-bot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .service-top {
+    margin: 2rem;
+  }
+  .service-bot {
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,131 @@
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+
+  /* centering fixed div */
+  width: 100%;
+  position: fixed;
+
+  padding: 0.5rem 10.5rem;
+  z-index: 2000;
+}
+.navbar.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.logo img {
+  margin-left: 0.2rem;
+  width: 60%;
+}
+.menu-btn {
+  background-color: var(--secondary);
+  padding: 3px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn:active {
+  background-color: var(--primary);
+  transform: scale(1.03);
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-links li {
+  position: relative;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.navbar.active .nav-links li {
+  color: var(--primary);
+}
+.navbar.active .nav-links li::after {
+  background-color: var(--primary);
+}
+.nav-links li::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  height: 3px;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.nav-links li:hover::after {
+  width: 80%;
+}
+@media screen and (max-width: 1050px) {
+  .navbar {
+    padding: 0.5rem 8rem;
+  }
+  .logo img {
+    width: 230px;
+    height: 85px;
+  }
+  .nav-links li {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu-btn {
+    display: flex;
+  }
+  .nav-links {
+    width: 60%;
+    position: fixed;
+    right: -100%;
+    top: 85px;
+    flex-direction: column;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+  .nav-links.active {
+    right: 10px;
+  }
+  .nav-links li {
+    color: white !important;
+    margin: 1rem 0;
+  }
+  .navbar {
+    padding: 0.5rem 4rem;
+  }
+  .logo img {
+    width: 190px;
+    height: 75px;
+  }
+  .nav-links li {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+  .logo img {
+    width: 150px;
+    height: 60px;
+  }
+  .menu-btn {
+    width: 2rem;
+  }
+}
